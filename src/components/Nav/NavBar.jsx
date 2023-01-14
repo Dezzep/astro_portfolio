@@ -3,7 +3,7 @@ import NavLinks from './NavLinks.jsx';
 
 export default function NavBar(props) {
   return (
-    <div className="py-6 sticky top-0  z-10">
+    <div className="py-6 sticky top-0 bg-black/20">
       <div className="relative container flex justify-between  mx-auto px-8  w-full">
         <a
           href="/"

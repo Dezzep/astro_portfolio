@@ -1,0 +1,69 @@
+---
+import Typer from '../Home/Typer';
+---
+
+<div
+  class="grid grid-flow-row grid-cols-12 h-screen pt-36 pb-8 bg-[#AB09EB]/10"
+>
+  <div class="md:col-span-7 col-span-12 pl-4 md:pl-32">
+    <h1 class="text-4xl">
+      Hi There!
+      <span class="wave" role="img" aria-labelledby="wave"> 👋🏻</span>
+    </h1>
+    <h1 class="text-4xl mt-10 mb-16">
+      <span
+        class="text-transparent bg-clip-text bg-gradient-to-l from-purpMain-1 to-blue-400"
+      >
+        I'M <strong>JACOB HANDELMAN</strong></span
+      >
+    </h1>
+
+    <Typer client:load />
+  </div>
+
+  <style>
+    .wave {
+      animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+      animation-duration: 2.1s; /* Change to speed up or slow down */
+      animation-iteration-count: infinite; /* Never stop waving :) */
+      transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+      display: inline-block;
+    }
+
+    @keyframes wave-animation {
+      0% {
+        transform: rotate(0deg);
+      }
+      10% {
+        transform: rotate(14deg);
+      } /* The following five values can be played with to make the waving more or less extreme */
+      20% {
+        transform: rotate(-8deg);
+      }
+      30% {
+        transform: rotate(14deg);
+      }
+      40% {
+        transform: rotate(-4deg);
+      }
+      50% {
+        transform: rotate(10deg);
+      }
+      60% {
+        transform: rotate(0deg);
+      } /* Reset for the last half to pause */
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+    .Typewriter__wrapper {
+      font-size: 2.2em !important;
+      color: #be6adf !important;
+      font-weight: 600 !important;
+    }
+    .Typewriter__cursor {
+      font-size: 2.4em !important;
+      color: #b562d6 !important;
+    }
+  </style>
+</div>

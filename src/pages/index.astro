@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Particle from '../components/Particle.jsx';
 import NavBar from '../components/Nav/NavBar.jsx';
 import homeBG from '../assets/home-bg.jpg';
+import Home from '../components/Home/Home.astro';
 ---
 
 <Layout title="Home Page">
@@ -18,8 +19,11 @@ import homeBG from '../assets/home-bg.jpg';
       backgroundColor: 'rgba(0, 0, 0, 0.9)',
     }}
   >
-    <NavBar />
-    <div class="h-screen"></div>
+    <div class="h-screen">
+      <NavBar />
+
+      <Home />
+    </div>
     <Particle client:load />
   </div>
 </Layout>
