@@ -1,0 +1,38 @@
+---
+const year = new Date().getFullYear();
+import { AiFillGithub } from 'react-icons/ai';
+import { FaLinkedinIn } from 'react-icons/fa';
+---
+
+<footer class="bg-black flex justify-around py-2">
+  <p class="">
+    &copy; {year}
+    Jacob Handelman
+  </p>
+
+  <p class="hidden lg:inline-block pr-24">
+    Powered by <a href="https://astro.build/" class="hover:text-purpMain-50"
+      >Astro</a
+    > and <a href="https://www.netlify.com" class="hover:text-purpMain-50"
+      >Netlify</a
+    >
+  </p>
+  <div class="flex gap-8">
+    <a
+      href="https://github.com/Dezzep"
+      target="_blank"
+      rel="noreferrer"
+      class="text-2xl hover:text-purple-300/90"
+    >
+      <AiFillGithub />
+    </a>
+    <a
+      href="https://www.linkedin.com/in/jacob-handelman/"
+      target="_blank"
+      rel="noreferrer"
+      class="text-2xl hover:text-purple-300/90"
+    >
+      <FaLinkedinIn />
+    </a>
+  </div>
+</footer>

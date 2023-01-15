@@ -23,7 +23,7 @@ export default function NavLinks(props) {
         Skills
       </a>
       <a
-        href="#about"
+        href="/projects"
         className="md:text-xl hover:text-purpMain-50 flex items-center gap-2 tracking-wider"
       >
         <AiOutlineFundProjectionScreen />
