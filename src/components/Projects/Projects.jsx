@@ -20,7 +20,7 @@ const Projects = () => {
           <h1 className=" text-4xl sm:text-5xl mb-4">
             My Recent <strong className="text-purpMain-50 ">Works </strong>
           </h1>
-          <p className="pb-32">
+          <p className="pb-32 px-2">
             Here are a few projects I've worked on recently.
           </p>
           <div className="container grid  grid-cols-1 xl:grid-cols-2  mx-auto px-8 md:px-16 lg:px-24 w-full gap-12 items-center py-6">
@@ -63,9 +63,9 @@ const Projects = () => {
               description="Uses a weather api to fetch data and displays the information obtained. Converts temperatures and averages out received data to determine the five day forecast."
               source="https://github.com/Dezzep/weather-app"
               preview="https://dezzep.github.io/weather-app/"
-              tools1={<JavaScriptDiv />}
-              tools2={<SassDiv />}
-              tools3={<Html5Div />}
+              tools2={<JavaScriptDiv />}
+              tools3={<SassDiv />}
+              tools1={<Html5Div />}
               tools4={<WebPackDiv />}
             />
           </div>

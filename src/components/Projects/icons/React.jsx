@@ -1,6 +1,6 @@
 const React = () => {
   return (
-    <div class="flex-col ml-2">
+    <div class="flex-col sm:ml-2">
       <svg
         class="ease-in duration-100 hover:scale-110 block mx-auto mb-2"
         xmlns="http://www.w3.org/2000/svg"
