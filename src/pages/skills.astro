@@ -1,14 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Particle from '../components/Particle.jsx';
 import Header from '../components/Nav/NavBar.jsx';
+import Particle from '../components/Particle.jsx';
 import Footer from '../components/Footer/Footer.astro';
-import Projects from '../components/Projects/Projects.jsx';
+
+import Skills from '../components/Skills/Skills.astro';
 ---
 
-<Layout title="Projects">
+<Layout title="Skills">
   <Particle client:load />
-  <Header client:load />
-  <Projects client:visible />
+  <Header />
+  <Skills />
   <Footer />
 </Layout>

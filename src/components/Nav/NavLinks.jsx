@@ -16,7 +16,7 @@ export default function NavLinks(props) {
         Home
       </a>
       <a
-        href="#work"
+        href="/skills"
         className=" md:text-xl hover:text-purpMain-50 flex items-center gap-2 tracking-wider  "
       >
         <AiOutlineUser style={{ marginBottom: '2px' }} />

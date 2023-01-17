@@ -5,12 +5,7 @@ function Type() {
     <div className="text-xl sm:text-3xl text-purpMain-50">
       <Typewriter
         options={{
-          strings: [
-            'Developer',
-            'Programmer',
-            'MERN Stack Developer',
-            'Reader',
-          ],
+          strings: ['Developer', 'Programmer', 'Tech Enthusiast'],
           autoStart: true,
           loop: true,
           deleteSpeed: 50,

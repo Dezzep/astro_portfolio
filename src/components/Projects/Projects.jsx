@@ -14,10 +14,10 @@ import WebPackDiv from './icons/Webpack.jsx';
 
 const Projects = () => {
   return (
-    <div className="bg-black pt-12 pb-16">
+    <div className="bg-black pt-36 pb-16">
       <div className="mx-auto">
         <div className="flex flex-col items-center justify-center h-full">
-          <h1 className="text-5xl mb-4">
+          <h1 className=" text-4xl sm:text-5xl mb-4">
             My Recent <strong className="text-purpMain-50 ">Works </strong>
           </h1>
           <p className="pb-32">
