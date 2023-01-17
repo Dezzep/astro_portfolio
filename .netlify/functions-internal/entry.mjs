@@ -1,5 +1,5 @@
 import * as adapter from '@astrojs/netlify/netlify-functions.js';
-import React$1, { createElement, useState, useEffect } from 'react';
+import React$1, { createElement } from 'react';
 import ReactDOM from 'react-dom/server';
 import { escape } from 'html-escaper';
 /* empty css                                 */import Particles from 'react-tsparticles';
@@ -9,8 +9,7 @@ import { FaLinkedinIn } from 'react-icons/fa';
 import Typewriter from 'typewriter-effect';
 import Tilt from 'react-parallax-tilt';
 import { CgFileDocument } from 'react-icons/cg';
-/* empty css                                 */import { pdfjs, Document, Page } from 'react-pdf';
-/* empty css                                  */import { SiOracle, SiTailwindcss, SiJest, SiLinux, SiVisualstudiocode, SiOpenai, SiWebpack } from 'react-icons/si';
+/* empty css                                 */import { SiOracle, SiTailwindcss, SiJest, SiLinux, SiVisualstudiocode, SiOpenai, SiWebpack } from 'react-icons/si';
 import { DiJavascript1, DiReact, DiNodejs, DiMongodb, DiJava, DiHtml5, DiCss3, DiSass, DiGit, DiDocker } from 'react-icons/di';
 import { BsBootstrap } from 'react-icons/bs';
 import GitHubCalendar from 'react-github-calendar';
@@ -2596,66 +2595,481 @@ const _page1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
 
 const pdf = "/assets/JacobHandelmanCV.3d875a2a.pdf";
 
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
-const Resume = () => {
-  const [width, setWidth] = useState(1200);
-  useEffect(() => {
-    setWidth(window.innerWidth);
-  }, []);
-  return /* @__PURE__ */ jsxs("div", {
-    className: "flex justify-center flex-col mb-32",
-    children: [/* @__PURE__ */ jsxs("button", {
-      className: "px-7 mx-auto flex gap-2 justify-center items-center bg-purpMain-50/30 p-3 font-semibold  hover:bg-purpMain-50/[.2] mb-6 mt-6",
-      onClick: (e) => {
-        e.preventDefault();
-        window.open(pdf);
-      },
-      children: [/* @__PURE__ */ jsx("span", {
-        className: "text-xl",
-        children: /* @__PURE__ */ jsx(AiOutlineDownload, {})
-      }), "Download CV"]
-    }), /* @__PURE__ */ jsx("div", {
-      className: "mb-8",
-      children: /* @__PURE__ */ jsx(Document, {
-        file: pdf,
-        className: "flex justify-center text-transparent leading-[0] select-none",
-        children: /* @__PURE__ */ jsx(Page, {
-          pageNumber: 1,
-          scale: width > 786 ? 1.7 : 0.6
-        })
-      })
-    }), /* @__PURE__ */ jsx("div", {
-      children: /* @__PURE__ */ jsxs(Document, {
-        file: pdf,
-        className: "flex justify-center text-transparent leading-[0] select-none",
-        children: [/* @__PURE__ */ jsx(Page, {
-          pageNumber: 2,
-          scale: width > 786 ? 1.7 : 0.6
-        }), " "]
-      })
-    }), /* @__PURE__ */ jsxs("button", {
-      className: "px-7 mx-auto flex gap-2 justify-center items-center bg-purpMain-50/30 p-3 font-semibold  hover:bg-purpMain-50/[.2] mb-6 mt-6",
-      onClick: (e) => {
-        e.preventDefault();
-        window.open(pdf);
-      },
-      children: [" ", /* @__PURE__ */ jsx("span", {
-        className: "text-xl",
-        children: /* @__PURE__ */ jsx(AiOutlineDownload, {})
-      }), "Download CV"]
-    })]
-  });
-};
-__astro_tag_component__(Resume, "@astrojs/react");
-
-const $$Astro$2 = createAstro("/Users/jacobhandelman/repos/personal-projects/astro-playground/astro-portfolio/src/pages/resume.astro", "", "file:///Users/jacobhandelman/repos/personal-projects/astro-playground/astro-portfolio/");
-const $$Resume = createComponent(async ($$result, $$props, $$slots) => {
+const $$Astro$2 = createAstro("/Users/jacobhandelman/repos/personal-projects/astro-playground/astro-portfolio/src/components/Resume/Resume.astro", "", "file:///Users/jacobhandelman/repos/personal-projects/astro-playground/astro-portfolio/");
+const $$Resume$1 = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$2, $$props, $$slots);
+  Astro2.self = $$Resume$1;
+  return renderTemplate`${maybeRenderHead($$result)}<h1 class="text-4xl sm:text-5xl text-center pt-36">
+  My <strong class="text-purpMain-50">Resume</strong>
+</h1>
+
+<div class="flex justify-center flex-col mb-6 mt-6">
+  <a${addAttribute(pdf, "href")}>
+    <button class="px-7 mx-auto flex gap-2 justify-center items-center bg-purpMain-50/30 p-3 font-semibold hover:bg-purpMain-50/[.2] mt-6">
+      <span class="text-xl">
+        ${renderComponent($$result, "AiOutlineDownload", AiOutlineDownload, {})}
+      </span>
+      Download My Resume
+    </button>
+  </a>
+</div>
+
+<div class="max-w-3xl p-3 mx-auto my-auto bg-gray-100 border-4 border-gray-700 print:border-0 page print:max-w-letter print:max-h-letter print:mx-0 print:my-o lg:h-letter md:max-w-letter md:h-letter xsm:p-8 sm:p-9 md:p-16 lg:mt-6 rounded-2xl print:bg-white mb-6">
+  <header class="inline-flex items-baseline justify-between w-full mb-3 align-top border-b-8">
+    <div class="block">
+      <h1 class="mb-0 text-5xl font-bold text-gray-800">Jacob Handelman</h1>
+      <h2 class="m-0 ml-2 text-2xl font-semibold text-gray-700">
+        Full Stack Web Development
+      </h2>
+
+      <h3 class="m-0 mt-2 ml-2 font-semibold text-md text-gray-600">
+        Montreal, Quebec
+      </h3>
+    </div>
+    <div class="justify-between px-3 mt-0 mb-5 text-3xl font-bold text-gray-200 initials-container bg-gray-750 print:bg-black" style="padding-bottom: 1.5rem; padding-top: 1.5rem;">
+      <div class="text-center text-gray-400">J</div>
+      <div class="text-center text-gray-400">H</div>
+    </div>
+  </header>
+
+  <div class="col-gap-16 md:col-count-2 print:col-count-2 md:h-letter-col-full print:h-letter-col-full col-fill-balance">
+    <section class="pb-4 mt-4 first:mt-0">
+      <div class="break-inside-avoid">
+        <section class="pb-2 mb-2 border-b-2 break-inside-avoid">
+          <ul class="list-inside pr-7">
+            <li class="mt-1 al text-black transition duration-100 ease-in text-gray-550 text-md hover:text-gray-700 print:">
+              <a href="https://jacobhandelman.com" target="_blank" class="group">
+                <span class="mr-2 text-lg font-semibold text-gray-700">
+                  Portfolio:
+                </span>
+                jacobhandelman.com
+                <span class="inline-block font-normal text-black transition duration-100 ease-in text-gray-550 print:text-black group-hover:text-gray-700 print:">
+                  ↗
+                </span>
+              </a>
+            </li>
+            <li class="mt-1 al transition duration-100 ease-in text-gray-700 text-md hover:text-gray-800">
+              <a href="https://github.com/DezzEP" target="_blank" class="group">
+                <span class="mr-5 text-lg font-semibold text-gray-700">
+                  Github:
+                </span>
+                DezzEP
+                <span class="inline-block font-normal text-black transition duration-100 ease-in print:text-black group-hover:text-gray-800 print:">
+                  ↗
+                </span>
+              </a>
+            </li>
+
+            <li class="mt-1 al transition duration-100 ease-in text-gray-700 text-md hover:text-gray-700">
+              <a href="mailto:jacobhandelman@gmail.com" class="group">
+                <span class="mr-8 text-lg font-semibold text-gray-700">
+                  Email:
+                </span>
+                jacobhandelman@gmail.com
+                <span class="inline-block font-normal transition duration-100 ease-in text-gray-700 print:text-black group-hover:text-gray-700">
+                  ↗
+                </span>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </section>
+    <section class="pb-4 mt-4 first:mt-0">
+      <div class="break-inside-avoid">
+        <h2 class="mb-2 text-lg font-bold tracking-widest text-gray-700 print:font-normal">
+          SKILLS
+        </h2>
+        <section class="mb-2 break-inside-avoid">
+          <header>
+            <h3 class="text-lg font-semibold text-gray-700">
+              Full Stack Web Development
+            </h3>
+          </header>
+
+          <div class="my-1 last:pb-1">
+            <ul class="flex flex-wrap text-sm2 -mr-1.6 -mb-1">
+              <li class="px-2.5 mr-1 mb-1 text-black select-none print:bg-white print:border-inset bg-gray-300">
+                HTML5
+              </li>
+              <li class="px-2.5 mr-1 mb-1 text-black select-none print:bg-white print:border-inset bg-gray-300">
+                CSS3
+              </li>
+              <li class="px-2.5 mr-1 mb-1 text-black select-none print:bg-white print:border-inset bg-gray-300">
+                SCSS
+              </li>
+
+              <li class="px-2.5 mr-1 mb-1 text-black select-none print:bg-white print:border-inset bg-gray-300">
+                Tailwind.css
+              </li>
+              <li class="px-2.5 mr-1 mb-1 text-black select-none print:bg-white print:border-inset bg-gray-300">
+                Bootstrap
+              </li>
+              <li class="px-2.5 mr-1 mb-1 text-black select-none print:bg-white print:border-inset bg-gray-300">
+                Javascript
+              </li>
+              <li class="px-2.5 mr-1 mb-1 text-black select-none print:bg-white print:border-inset bg-gray-300">
+                Java
+              </li>
+
+              <li class="px-2.5 mr-1 mb-1 text-black select-none print:bg-white print:border-inset bg-gray-300">
+                Node.js
+              </li>
+              <li class="px-2.5 mr-1 mb-1 text-black select-none print:bg-white print:border-inset bg-gray-300">
+                JSX
+              </li>
+              <li class="px-2.5 mr-1 mb-1 text-black select-none print:bg-white print:border-inset bg-gray-300">
+                React
+              </li>
+              <li class="px-2.5 mr-1 mb-1 text-black select-none print:bg-white print:border-inset bg-gray-300">
+                React-Router
+              </li>
+
+              <li class="px-2.5 mr-1 mb-1 text-black select-none print:bg-white print:border-inset bg-gray-300">
+                Next.js
+              </li>
+              <li class="px-2.5 mr-1 mb-1 text-black select-none print:bg-white print:border-inset bg-gray-300">
+                Redux
+              </li>
+              <li class="px-2.5 mr-1 mb-1 text-black select-none print:bg-white print:border-inset bg-gray-300">
+                Astro
+              </li>
+              <li class="px-2.5 mr-1 mb-1 text-black select-none print:bg-white print:border-inset bg-gray-300">
+                Express.js
+              </li>
+              <li class="px-2.5 mr-1 mb-1 text-black select-none print:bg-white print:border-inset bg-gray-300">
+                NoSQL
+              </li>
+              <li class="px-2.5 mr-1 mb-1 text-black select-none print:bg-white print:border-inset bg-gray-300">
+                MongoDB
+              </li>
+              <li class="px-2.5 mr-1 mb-1 text-black select-none print:bg-white print:border-inset bg-gray-300">
+                MERN
+              </li>
+              <li class="px-2.5 mr-1 mb-1 text-black select-none print:bg-white print:border-inset bg-gray-300">
+                SQL
+              </li>
+              <li class="px-2.5 mr-1 mb-1 text-black select-none print:bg-white print:border-inset bg-gray-300">
+                OracleDB
+              </li>
+              <li class="px-2.5 mr-1 mb-1 text-black select-none print:bg-white print:border-inset bg-gray-300">
+                Jest
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="mb-2 break-inside-avoid">
+          <header>
+            <h3 class="font-semibold text-gray-700 text-m">DevOps</h3>
+          </header>
+          <div class="my-1 last:pb-1">
+            <ul class="flex flex-wrap text-sm2 -mr-1 -mb-1">
+              <li class="px-2.5 mr-1 mb-1 text-black print:bg-white print:border-inset bg-gray-300 select-none">
+                Docker
+              </li>
+
+              <li class="px-2.5 mr-1 mb-1 text-black print:bg-white print:border-inset bg-gray-300 select-none">
+                Git
+              </li>
+
+              <li class="px-2.5 mr-1 mb-1 text-black print:bg-white print:border-inset bg-gray-300 select-none">
+                Webpack
+              </li>
+
+              <li class="px-2.5 mr-1 mb-1 text-black print:bg-white print:border-inset bg-gray-300 select-none">
+                Open Ai
+              </li>
+
+              <li class="px-2.5 mr-1 mb-1 text-black print:bg-white print:border-inset bg-gray-300 select-none">
+                Ubuntu
+              </li>
+              <li class="px-2.5 mr-1 mb-1 text-black print:bg-white print:border-inset bg-gray-300 select-none">
+                MacOS 10+
+              </li>
+              <li class="px-2.5 mr-1 mb-1 text-black print:bg-white print:border-inset bg-gray-300 select-none">
+                Windows 7/8/10/11
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="pb-2 mt-4 border-b-4 first:mt-0">
+      <div class="break-inside-avoid">
+        <h2 class="mb-2 text-lg font-bold tracking-widest text-gray-700 print:font-normal">
+          EXPERIENCE
+        </h2>
+        <!--Job 1-->
+        <section class="mb-2 break-inside-avoid">
+          <header>
+            <h3 class="text-lg font-semibold text-gray-700">
+              Proscape Enterprises Inc
+            </h3>
+            <p class="al text-md text-gray-600 mb-2">April 2019 &ndash; 2022</p>
+          </header>
+          <ul class="mt-2 text-md text-gray-700 al">
+            <li>
+              <span class="transform -translate-y-px select-none text-gray-600">
+                &rsaquo;
+              </span>
+              Read and interpreted blueprints, specifications and schematics
+            </li>
+            <li>
+              <span class="transform -translate-y-px select-none text-gray-600">
+                &rsaquo;
+              </span>
+              Used hand tools and power tools to complete skilled deck building
+            </li>
+            <li>
+              <span class="transform -translate-y-px select-none text-gray-600">
+                &rsaquo;
+              </span>
+              Completed precise joining and high-quality finish work by properly
+              anchoring and bracing structures
+            </li>
+          </ul>
+        </section>
+        <section class="mb-2 break-inside-avoid">
+          <header>
+            <h3 class="text-lg font-semibold text-gray-700">
+              St-Viateur Bagel
+            </h3>
+            <p class="al text-md text-gray-600 mb-2">March 2016 &ndash; 2019</p>
+          </header>
+          <ul class="mt-2 text-md text-gray-700 al">
+            <li>
+              <span class="transform -translate-y-px select-none text-gray-600">
+                &rsaquo;
+              </span>
+              Handled customer transactions
+            </li>
+            <li>
+              <span class="transform -translate-y-px select-none text-gray-600">
+                &rsaquo;
+              </span>
+              Filled out inventory and production sheets
+            </li>
+            <li>
+              <span class="transform -translate-y-px select-none text-gray-600">
+                &rsaquo;
+              </span>
+              Made bagel dough, rolled bagels and baked them.
+            </li>
+          </ul>
+        </section>
+        <section class="mb-2 break-inside-avoid">
+          <header>
+            <h3 class="text-lg font-semibold text-gray-700">
+              Conform Action Data Systems
+            </h3>
+            <p class="al text-md text-gray-600 mb-2">June 2014 &ndash; 2016</p>
+          </header>
+          <ul class="mt-2 text-md text-gray-700 al">
+            <li>
+              <span class="transform -translate-y-px select-none text-gray-600">
+                &rsaquo;
+              </span>
+              Processed Material Safety Data Sheets, ensuring that they were up-to-date
+              as required by the law.
+            </li>
+            <li>
+              <span class="transform -translate-y-px select-none text-gray-600">
+                &rsaquo;
+              </span>
+              Scanned documents and saved them in the database to keep records of
+              essential information
+            </li>
+            <li>
+              <span class="transform -translate-y-px select-none text-gray-600">
+                &rsaquo;
+              </span>
+              Corrected data entry errors to prevent duplication or data degradation
+            </li>
+          </ul>
+        </section>
+        <!--                Additional Jobs Would Go Here-->
+      </div>
+    </section>
+    <section class="pb-2 mt-4 border-b-4 first:mt-0">
+      <div class="break-inside-avoid">
+        <h2 class="mb-2 text-lg font-bold tracking-widest text-gray-700 print:font-normal">
+          EDUCATION
+        </h2>
+
+        <header>
+          <h3 class="flex-grow text-lg font-semibold text-gray-700">
+            Vanier College
+          </h3>
+          <p class="al text-md text-gray-500">October 2022 &ndash; Current</p>
+          <p class="al text-gray-700 text-md">
+            <span class="font-semibold text-gray-700 text-md"> Program:</span>
+            Web & Database Programming
+          </p>
+        </header>
+
+        <p class="al text-gray-700 text-md">
+          <span class="font-semibold text-gray-700 text-md"> Average:</span>
+          A+
+        </p>
+      </div>
+    </section>
+
+    <section class="pb-4 mt-4 mb-4 border-b-2 break-inside-avoid">
+      <header>
+        <h3 class="flex-grow text-lg font-semibold text-gray-700">
+          University Of Helsinki
+        </h3>
+        <p class="al text-md text-gray-500">June 2022 &ndash; Current</p>
+        <p class="al text-gray-700 text-md">
+          <span class="font-semibold text-gray-700 text-md"> Course:</span>
+          Full Stack Open
+        </p>
+      </header>
+    </section>
+
+    <section class="pb-4 mt-4 mb-4 border-b-2 break-inside-avoid">
+      <header>
+        <h3 class="flex-grow text-lg font-semibold text-gray-700">
+          The Odin Project
+        </h3>
+        <p class="al text-md text-gray-500">November 2021 &ndash; July 2022</p>
+        <p class="al text-gray-700 text-md">
+          <span class="font-semibold text-gray-700 text-md"> Course:</span>
+          Fundamentals of Web Development
+        </p>
+        <p class="al text-gray-700 text-md">
+          <span class="font-semibold text-gray-700 text-md"> Course:</span>
+          Intermediate HTML and CSS
+        </p>
+        <p class="al text-gray-700 text-md">
+          <span class="font-semibold text-gray-700 text-md"> Course:</span>
+          Javascript
+        </p>
+      </header>
+    </section>
+
+    <section class="pb-4 mt-4 mb-4 border-b-2 break-inside-avoid">
+      <header>
+        <h3 class="flex-grow text-lg font-semibold text-gray-700">
+          Dawson College
+        </h3>
+        <p class="al text-md text-gray-500">August 2017 &ndash; 2019</p>
+        <p class="al text-gray-700 text-md">
+          <span class="font-semibold text-gray-700 text-md"> Program:</span>
+          Early Childhood Education
+        </p>
+        <p class="al text-gray-700 text-md">
+          <span class="font-semibold text-gray-700 text-md"> Credits:</span>
+          24.66
+        </p>
+        <p class="al text-gray-700 text-md">
+          <span class="font-semibold text-gray-700 text-md"> Average:</span>
+          A-
+        </p>
+      </header>
+    </section>
+    <section class="pb-2 mt-4 border-b-4 first:mt-0">
+      <div class="break-inside-avoid">
+        <h2 class="mb-2 text-lg font-bold tracking-widest text-gray-700 print:font-normal">
+          PROJECTS
+        </h2>
+
+        <section class="pb-4 mb-4 border-b-2 break-inside-avoid">
+          <header>
+            <h3 class="text-lg font-semibold text-gray-700">
+              <a href="https://github.com/Dezzep/library-rework" target="_blank" class="group">
+                Book Tracker
+                <span class="inline-block mr-3 font-normal transition duration-100 ease-in text-gray-600 print:text-black group-hover:text-gray-700">
+                  ↗
+                </span>
+              </a>
+              <span class="inline-block font-normal transition duration-100 ease-in text-gray-600 print:text-black group-hover:text-gray-700">
+                <a href="https://github.com/Dezzep/library-rework" target="_blank">
+                  <i class="fab fa-github"></i>
+                </a>
+              </span>
+            </h3>
+            <p class="al text-md text-gray-600">2021 | MERN stack</p>
+          </header>
+          <p class="mt-2.1 text-md text-gray-700 al">
+            A book tracker which allows you to create an account, store books,
+            rate them and toggle the read status.
+          </p>
+        </section>
+        <section class="pb-4 mb-4 border-b-2 break-inside-avoid">
+          <header>
+            <h3 class="text-lg font-semibold text-gray-700">
+              <a href="https://github.com/Dezzep/astro_portfolio" target="_blank" class="group">
+                Portfolio Website
+                <span class="inline-block mr-3 font-normal transition duration-100 ease-in text-gray-550 print:text-black group-hover:text-gray-700">
+                  ↗
+                </span>
+              </a>
+              <span class="inline-block font-normal transition duration-100 ease-in text-gray-550 print:text-black group-hover:text-gray-700">
+                <a href="https://github.com/Dezzep/astro_portfolio" target="_blank">
+                  <i class="fab fa-github"></i>
+                </a>
+              </span>
+            </h3>
+            <p class="al text-md text-gray-600">
+              Since 2023 | React, Astro, Tailwind
+            </p>
+          </header>
+          <p class="mt-2.1 text-md text-gray-700 al">
+            A personal portfolio that displays some of the projects I have
+            worked on.
+          </p>
+        </section>
+        <section class="pb-4 mb-4 border-b-2 break-inside-avoid">
+          <header>
+            <h3 class="text-lg font-semibold text-gray-700">
+              <a href="https://github.com/Dezzep/shopping-cart" target="_blank" class="group">
+                Shopping Cart
+                <span class="inline-block mr-3 font-normal transition duration-100 ease-in text-gray-600 print:text-black group-hover:text-gray-700">
+                  ↗
+                </span>
+              </a>
+              <span class="inline-block font-normal transition duration-100 ease-in text-gray-600 print:text-black group-hover:text-gray-700">
+                <a href="https://github.com/Dezzep/shopping-cart" target="_blank">
+                  <i class="fab fa-github"></i>
+                </a>
+              </span>
+            </h3>
+            <p class="al text-md text-gray-600">2021 | React, Tailwind</p>
+          </header>
+          <p class="mt-2.1 text-md text-gray-700 al">
+            I created this to show off my design skills and to display API data
+            in a meaningful way. This project includes and OracleDB branch which
+            works with the database to display data and allows users to create
+            accounts and buy (fake) items.
+          </p>
+        </section>
+      </div>
+    </section>
+  </div>
+</div>
+<div class="flex justify-center flex-col mb-16">
+  <a${addAttribute(pdf, "href")}>
+    <button class="px-7 mx-auto flex gap-2 justify-center items-center bg-purpMain-50/30 p-3 font-semibold hover:bg-purpMain-50/[.2] mt-6">
+      <span class="text-xl">
+        ${renderComponent($$result, "AiOutlineDownload", AiOutlineDownload, {})}
+      </span>
+      Download My Resume
+    </button>
+  </a>
+</div>`;
+}, "/Users/jacobhandelman/repos/personal-projects/astro-playground/astro-portfolio/src/components/Resume/Resume.astro");
+
+const $$Astro$1 = createAstro("/Users/jacobhandelman/repos/personal-projects/astro-playground/astro-portfolio/src/pages/resume.astro", "", "file:///Users/jacobhandelman/repos/personal-projects/astro-playground/astro-portfolio/");
+const $$Resume = createComponent(async ($$result, $$props, $$slots) => {
+  const Astro2 = $$result.createAstro($$Astro$1, $$props, $$slots);
   Astro2.self = $$Resume;
   return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "title": "Resume" }, { "default": () => renderTemplate`${maybeRenderHead($$result)}<div class="bg-black min-h-screen">
     ${renderComponent($$result, "Particle", Particle, { "client:load": true, "client:component-hydration": "load", "client:component-path": "/Users/jacobhandelman/repos/personal-projects/astro-playground/astro-portfolio/src/components/Particle.jsx", "client:component-export": "default" })}
     ${renderComponent($$result, "Header", NavBar, {})}
-    ${renderComponent($$result, "Resume", Resume, { "client:load": true, "client:component-hydration": "load", "client:component-path": "/Users/jacobhandelman/repos/personal-projects/astro-playground/astro-portfolio/src/components/Resume/Resume.jsx", "client:component-export": "default" })}
+    ${renderComponent($$result, "Resume", $$Resume$1, {})}
 
     ${renderComponent($$result, "Footer", $$Footer, {})}
   </div>` })}`;
@@ -2777,7 +3191,7 @@ const Technology = () => {
 };
 __astro_tag_component__(Technology, "@astrojs/react");
 
-function Github() {
+const Github = () => {
   return /* @__PURE__ */ jsxs("div", {
     className: "flex flex-col justify-center items-center p-6 pb-28 pt-4",
     children: [/* @__PURE__ */ jsxs("h1", {
@@ -2794,25 +3208,22 @@ function Github() {
       fontSize: 16
     })]
   });
-}
+};
 __astro_tag_component__(Github, "@astrojs/react");
 
-const $$Astro$1 = createAstro("/Users/jacobhandelman/repos/personal-projects/astro-playground/astro-portfolio/src/components/Skills/Skills.astro", "", "file:///Users/jacobhandelman/repos/personal-projects/astro-playground/astro-portfolio/");
-const $$Skills$1 = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$1, $$props, $$slots);
-  Astro2.self = $$Skills$1;
-  return renderTemplate`${maybeRenderHead($$result)}<div class="bg-black min-h-screen">
-  <div></div>
-  ${renderComponent($$result, "Technology", Technology, {})}
-  ${renderComponent($$result, "Github", Github, { "client:visible": true, "client:component-hydration": "visible", "client:component-path": "/Users/jacobhandelman/repos/personal-projects/astro-playground/astro-portfolio/src/components/Skills/Github.jsx", "client:component-export": "default" })}
-</div>`;
-}, "/Users/jacobhandelman/repos/personal-projects/astro-playground/astro-portfolio/src/components/Skills/Skills.astro");
+const Skills = () => {
+  return /* @__PURE__ */ jsxs("div", {
+    className: "bg-black min-h-screen",
+    children: [/* @__PURE__ */ jsx(Technology, {}), /* @__PURE__ */ jsx(Github, {})]
+  });
+};
+__astro_tag_component__(Skills, "@astrojs/react");
 
 const $$Astro = createAstro("/Users/jacobhandelman/repos/personal-projects/astro-playground/astro-portfolio/src/pages/skills.astro", "", "file:///Users/jacobhandelman/repos/personal-projects/astro-playground/astro-portfolio/");
 const $$Skills = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
   Astro2.self = $$Skills;
-  return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "title": "Skills" }, { "default": () => renderTemplate`${renderComponent($$result, "Particle", Particle, { "client:load": true, "client:component-hydration": "load", "client:component-path": "/Users/jacobhandelman/repos/personal-projects/astro-playground/astro-portfolio/src/components/Particle.jsx", "client:component-export": "default" })}${renderComponent($$result, "Header", NavBar, {})}${renderComponent($$result, "Skills", $$Skills$1, {})}${renderComponent($$result, "Footer", $$Footer, {})}` })}`;
+  return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "title": "Skills" }, { "default": () => renderTemplate`${renderComponent($$result, "Particle", Particle, { "client:load": true, "client:component-hydration": "load", "client:component-path": "/Users/jacobhandelman/repos/personal-projects/astro-playground/astro-portfolio/src/components/Particle.jsx", "client:component-export": "default" })}${renderComponent($$result, "Header", NavBar, {})}${renderComponent($$result, "Skills", Skills, { "client:load": true, "client:component-hydration": "load", "client:component-path": "/Users/jacobhandelman/repos/personal-projects/astro-playground/astro-portfolio/src/components/Skills/Skills.jsx", "client:component-export": "default" })}${renderComponent($$result, "Footer", $$Footer, {})}` })}`;
 }, "/Users/jacobhandelman/repos/personal-projects/astro-playground/astro-portfolio/src/pages/skills.astro");
 
 const $$file = "/Users/jacobhandelman/repos/personal-projects/astro-playground/astro-portfolio/src/pages/skills.astro";
@@ -2902,7 +3313,7 @@ function deserializeManifest(serializedManifest) {
   };
 }
 
-const _manifest = Object.assign(deserializeManifest({"adapterName":"@astrojs/netlify/functions","routes":[{"file":"","links":["assets/index.bca6e41a.css","assets/index.225fb3e1.css"],"scripts":[],"routeData":{"route":"/","type":"page","pattern":"^\\/$","segments":[],"params":[],"component":"src/pages/index.astro","pathname":"/","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/index.bca6e41a.css"],"scripts":[],"routeData":{"route":"/projects","type":"page","pattern":"^\\/projects\\/?$","segments":[[{"content":"projects","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/projects.astro","pathname":"/projects","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/index.bca6e41a.css","assets/resume.dc6f5da3.css"],"scripts":[],"routeData":{"route":"/resume","type":"page","pattern":"^\\/resume\\/?$","segments":[[{"content":"resume","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/resume.astro","pathname":"/resume","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/index.bca6e41a.css"],"scripts":[],"routeData":{"route":"/skills","type":"page","pattern":"^\\/skills\\/?$","segments":[[{"content":"skills","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/skills.astro","pathname":"/skills","_meta":{"trailingSlash":"ignore"}}}],"base":"/","markdown":{"drafts":false,"syntaxHighlight":"shiki","shikiConfig":{"langs":[],"theme":"github-dark","wrap":false},"remarkPlugins":[],"rehypePlugins":[],"remarkRehype":{},"extendDefaultPlugins":false,"isAstroFlavoredMd":false,"isExperimentalContentCollections":false,"contentDir":"file:///Users/jacobhandelman/repos/personal-projects/astro-playground/astro-portfolio/src/content/"},"pageMap":null,"renderers":[],"entryModules":{"\u0000@astrojs-ssr-virtual-entry":"entry.mjs","/Users/jacobhandelman/repos/personal-projects/astro-playground/astro-portfolio/src/components/Particle.jsx":"Particle.db9a69e4.js","/Users/jacobhandelman/repos/personal-projects/astro-playground/astro-portfolio/src/components/Nav/NavBar.jsx":"NavBar.a9ef4bd6.js","/Users/jacobhandelman/repos/personal-projects/astro-playground/astro-portfolio/src/components/Projects/Projects.jsx":"Projects.60cc373c.js","/Users/jacobhandelman/repos/personal-projects/astro-playground/astro-portfolio/src/components/Resume/Resume.jsx":"Resume.f691ec08.js","/Users/jacobhandelman/repos/personal-projects/astro-playground/astro-portfolio/src/components/Skills/Github.jsx":"Github.662e0f1d.js","/Users/jacobhandelman/repos/personal-projects/astro-playground/astro-portfolio/src/components/Home/Typer":"Typer.616f75c6.js","react-parallax-tilt":"index.esm.1829ff4a.js","@astrojs/react/client.js":"client.fc4dc050.js","astro:scripts/before-hydration.js":""},"assets":["/assets/home-alt.e613ccac.svg","/assets/home-bg-2.0a2cb12a.jpg","/assets/library-device.a4338155.png","/assets/weather-device.dcf673dd.png","/assets/shop-device.d45d7b92.png","/assets/portfolio-device.2a472922.png","/assets/JacobHandelmanCV.3d875a2a.pdf","/assets/avatar.078c0f78.svg","/assets/index.bca6e41a.css","/assets/index.225fb3e1.css","/assets/resume.dc6f5da3.css","/Github.662e0f1d.js","/NavBar.a9ef4bd6.js","/Particle.db9a69e4.js","/Projects.60cc373c.js","/Resume.f691ec08.js","/Typer.616f75c6.js","/client.fc4dc050.js","/favicon.svg","/index.esm.1829ff4a.js","/Fonts/Raleway-Medium.woff2","/chunks/index.c1198e19.js","/chunks/index.esm.a0e418ff.js","/chunks/jsx-runtime.845b2cd2.js"]}), {
+const _manifest = Object.assign(deserializeManifest({"adapterName":"@astrojs/netlify/functions","routes":[{"file":"","links":["assets/index.611481bf.css","assets/index.225fb3e1.css"],"scripts":[],"routeData":{"route":"/","type":"page","pattern":"^\\/$","segments":[],"params":[],"component":"src/pages/index.astro","pathname":"/","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/index.611481bf.css"],"scripts":[],"routeData":{"route":"/projects","type":"page","pattern":"^\\/projects\\/?$","segments":[[{"content":"projects","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/projects.astro","pathname":"/projects","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/index.611481bf.css"],"scripts":[],"routeData":{"route":"/resume","type":"page","pattern":"^\\/resume\\/?$","segments":[[{"content":"resume","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/resume.astro","pathname":"/resume","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/index.611481bf.css"],"scripts":[],"routeData":{"route":"/skills","type":"page","pattern":"^\\/skills\\/?$","segments":[[{"content":"skills","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/skills.astro","pathname":"/skills","_meta":{"trailingSlash":"ignore"}}}],"base":"/","markdown":{"drafts":false,"syntaxHighlight":"shiki","shikiConfig":{"langs":[],"theme":"github-dark","wrap":false},"remarkPlugins":[],"rehypePlugins":[],"remarkRehype":{},"extendDefaultPlugins":false,"isAstroFlavoredMd":false,"isExperimentalContentCollections":false,"contentDir":"file:///Users/jacobhandelman/repos/personal-projects/astro-playground/astro-portfolio/src/content/"},"pageMap":null,"renderers":[],"entryModules":{"\u0000@astrojs-ssr-virtual-entry":"entry.mjs","/Users/jacobhandelman/repos/personal-projects/astro-playground/astro-portfolio/src/components/Particle.jsx":"Particle.db9a69e4.js","/Users/jacobhandelman/repos/personal-projects/astro-playground/astro-portfolio/src/components/Nav/NavBar.jsx":"NavBar.a7993684.js","/Users/jacobhandelman/repos/personal-projects/astro-playground/astro-portfolio/src/components/Projects/Projects.jsx":"Projects.60cc373c.js","/Users/jacobhandelman/repos/personal-projects/astro-playground/astro-portfolio/src/components/Skills/Skills.jsx":"Skills.2cd6395c.js","/Users/jacobhandelman/repos/personal-projects/astro-playground/astro-portfolio/src/components/Home/Typer":"Typer.616f75c6.js","react-parallax-tilt":"index.esm.1829ff4a.js","@astrojs/react/client.js":"client.fc4dc050.js","astro:scripts/before-hydration.js":""},"assets":["/assets/home-alt.e613ccac.svg","/assets/home-bg-2.0a2cb12a.jpg","/assets/avatar.078c0f78.svg","/assets/JacobHandelmanCV.3d875a2a.pdf","/assets/library-device.a4338155.png","/assets/shop-device.d45d7b92.png","/assets/weather-device.dcf673dd.png","/assets/portfolio-device.2a472922.png","/assets/index.611481bf.css","/assets/index.225fb3e1.css","/NavBar.a7993684.js","/Particle.db9a69e4.js","/Projects.60cc373c.js","/Skills.2cd6395c.js","/Typer.616f75c6.js","/client.fc4dc050.js","/favicon.svg","/index.esm.1829ff4a.js","/Fonts/Raleway-Medium.woff2","/chunks/index.c1198e19.js","/chunks/index.esm.300b70fa.js","/chunks/jsx-runtime.845b2cd2.js"]}), {
 	pageMap: pageMap,
 	renderers: renderers
 });

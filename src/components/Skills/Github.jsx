@@ -1,6 +1,6 @@
 import GitHubCalendar from 'react-github-calendar';
 
-function Github() {
+const Github = () => {
   return (
     <div className="flex flex-col justify-center items-center p-6 pb-28 pt-4">
       <h1 className="mb-12 text-4xl sm:text-5xl text-center">
@@ -15,6 +15,6 @@ function Github() {
       />
     </div>
   );
-}
+};
 
 export default Github;
