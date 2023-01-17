@@ -30,7 +30,7 @@ export default function NavLinks(props) {
         Projects
       </a>
       <a
-        href="#contact"
+        href="/resume"
         className="md:text-xl hover:text-purpMain-50 flex items-center gap-2 tracking-wider "
       >
         <CgFileDocument />

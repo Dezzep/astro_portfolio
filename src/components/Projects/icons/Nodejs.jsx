@@ -1,8 +1,8 @@
 const Nodejs = () => {
   return (
-    <div class="flex-col items-center">
+    <div className="flex-col items-center">
       <svg
-        class="ease-in duration-100 hover:scale-110 block mx-auto pl-1 sm:pl-0 mb-2"
+        className="ease-in duration-100 hover:scale-110 block mx-auto pl-1 sm:pl-0 mb-2"
         width="48px"
         height="48px"
         viewBox="-13 0 282 282"

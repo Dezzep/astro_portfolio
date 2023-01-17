@@ -1,8 +1,8 @@
 const Mongodb = () => {
   return (
-    <div class="flex-col items-center">
+    <div className="flex-col items-center">
       <svg
-        class="ease-in duration-100 hover:scale-110 block mx-auto mb-2"
+        className="ease-in duration-100 hover:scale-110 block mx-auto mb-2"
         xmlns="http://www.w3.org/2000/svg"
         width="48px"
         height="48px"
