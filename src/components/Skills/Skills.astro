@@ -1,0 +1,29 @@
+---
+import Technology from './Technology.jsx';
+import Styles from '../../Assets/Styles/Styles.css';
+---
+
+<!-- Optionally, include the theme (if you don't want to struggle to write the CSS) -->
+<link rel="stylesheet" href={Styles} />
+
+<!-- Prepare a container for your calendar. -->
+<Technology />
+<div class="calendar p-3 sm:p-4 lg:p-8 pb-32 mb-16">
+  <!-- Loading stuff -->
+  Loading the data just for you.
+</div>
+
+
+
+<script>
+  // or enable responsive functionality
+
+  GitHubCalendar('.calendar', 'Dezzep', {
+    responsive: true,
+    summary_text: false,
+    global_stats: true,
+    cache: false,
+  });
+</script>
+
+

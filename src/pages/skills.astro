@@ -4,12 +4,12 @@ import Header from '../components/Nav/NavBar.jsx';
 import Particle from '../components/Particle.jsx';
 import Footer from '../components/Footer/Footer.astro';
 
-import Skills from '../components/Skills/Skills.jsx';
+import Skills from '../components/Skills/Skills.astro';
 ---
 
 <Layout title="Skills">
   <Particle client:load />
   <Header />
-  <Skills client:load />
+  <Skills />
   <Footer />
 </Layout>

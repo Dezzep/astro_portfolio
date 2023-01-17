@@ -18,6 +18,9 @@ const { title } = Astro.props;
   <body class="bg-black">
     <slot />
   </body>
+  <script
+    src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"
+  ></script>
 </html>
 <style is:global>
   @font-face {
@@ -77,4 +80,6 @@ const { title } = Astro.props;
     font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
       DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
   }
+
+  
 </style>

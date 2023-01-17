@@ -1,0 +1,56 @@
+<style>
+  :root {
+    --color-calendar-graph-day-bg: #352b34;
+    --color-calendar-graph-day-L1-bg: #dd02e1;
+    --color-calendar-graph-day-L2-bg: #b419a1;
+    --color-calendar-graph-day-L3-bg: #841b7b;
+    --color-calendar-graph-day-L4-bg: #710160;
+  }
+
+  text.ContributionCalendar-label {
+    fill: #ccc;
+    font-size: 11px;
+  }
+
+  .Link--muted {
+    display: none;
+  }
+
+  .float-right {
+    display: none;
+  }
+
+  .graph-before-activity-overview {
+    border: none;
+  }
+
+  .contrib-column:nth-child(2) {
+    padding: 15px 0;
+
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  rect.ContributionCalendar-day[data-level='0'] {
+    fill: var(--color-calendar-graph-day-bg);
+  }
+
+  rect.ContributionCalendar-day[data-level='1'] {
+    fill: var(--color-calendar-graph-day-L1-bg);
+  }
+
+  rect.ContributionCalendar-day[data-level='2'] {
+    fill: var(--color-calendar-graph-day-L2-bg);
+  }
+
+  rect.ContributionCalendar-day[data-level='3'] {
+    fill: var(--color-calendar-graph-day-L3-bg);
+  }
+
+  rect.ContributionCalendar-day[data-level='4'] {
+    fill: var(--color-calendar-graph-day-L4-bg);
+  }
+</style>
