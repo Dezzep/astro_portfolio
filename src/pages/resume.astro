@@ -4,14 +4,14 @@ import Particle from '../components/Particle.jsx';
 import Header from '../components/Nav/NavBar.jsx';
 import Footer from '../components/Footer/Footer.astro';
 
-import Resume from '../components/Resume/Resume.jsx';
+import Resume from '../components/Resume/Resume.astro';
 ---
 
 <Layout title="Resume">
   <div class="bg-black min-h-screen">
     <Particle client:load />
     <Header />
-    <Resume client:load />
+    <Resume />
 
     <Footer />
   </div>
