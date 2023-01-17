@@ -7,9 +7,11 @@ import Tilt from 'react-parallax-tilt';
 
 <div class="pb-24">
   <section
-    class="flex flex-col px-4 xl:px-36 lg:flex-row pt-48 pb-32 gap-6 sm:gap-28 lg:gap-2"
+    class="flex justify-center mx-auto max-w-6xl flex-col px-4 xl:px-12 lg:flex-row pt-48 pb-32 gap-6 sm:gap-28 lg:gap-2"
   >
-    <div class="flex flex-col xl:w-5/6 3xl:max-w-4xl mx-auto lg:pl-12">
+    <div
+      class="flex flex-col mx-auto md:max-w-2xl lg:max-w-3xl xl:w-5/6 3xl:max-w-4xl lg:pl-12"
+    >
       <h1 class="text-4xl text-center mb-14">
         A LITTLE BIT <span class="text-purpMain-50"> ABOUT</span> ME{' '}
       </h1>
@@ -27,7 +29,7 @@ import Tilt from 'react-parallax-tilt';
         <br />
       </p>
     </div>
-    <div class="mx-auto xl:mx-0 xl:mr-32">
+    <div class="xl:mr-32 mx-auto">
       <Tilt client:visible>
         <img class="rounded-full h-[20rem]" src={avatarImage} alt="avatar" />
       </Tilt>

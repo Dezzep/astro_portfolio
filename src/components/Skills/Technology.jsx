@@ -26,7 +26,7 @@ import { AiFillApple, AiFillWindows } from 'react-icons/ai';
 const Technology = () => {
   return (
     <div className="bg-black pt-36">
-      <h1 className="text-4xl sm:text-5xl font-bold text-center pb-4 mb-6">
+      <h1 className="text-4xl sm:text-5xl  text-center pb-4 mb-6">
         Professional <span className="text-purpMain-50">Skillset</span>
       </h1>
       <div className="flex flex-wrap justify-center p-6 max-w-6xl mx-auto">
@@ -43,7 +43,7 @@ const Technology = () => {
         <Card item={<BsBootstrap />} title="Bootstrap" />
         <Card item={<SiJest />} title="Jest" />
       </div>
-      <h1 className="text-4xl sm:text-5xl font-bold text-center pb-4 mb-6 mt-6">
+      <h1 className="text-4xl sm:text-5xl  text-center pb-4 mb-6 mt-6">
         <span className="text-purpMain-50">Tools</span> I use
       </h1>
       <div className="flex flex-wrap justify-center p-6 max-w-6xl mx-auto mb-6">
