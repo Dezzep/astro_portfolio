@@ -17,10 +17,10 @@ import NavBar from '../Nav/NavBar.jsx';
     backgroundColor: 'rgba(0, 0, 0, 0.9)',
   }}
 >
-  <NavBar />
+  <NavBar client:load />
   <div class="bg-[#AB09EB]/10 flex lg:justify-around">
     <div
-      class="grid grid-flow-row grid-cols-12  mb-80  pt-36 pl-4 sm:pr-12 sm:pl-12 xl:gap-16"
+      class="grid grid-flow-row grid-cols-12 mb-80 pt-36 pl-4 sm:pr-12 sm:pl-12 xl:gap-16"
     >
       <div class="md:col-span-7 col-span-12">
         <h1 class="text-4xl sm:text-5xl">
@@ -38,7 +38,7 @@ import NavBar from '../Nav/NavBar.jsx';
         <Typer client:load />
       </div>
       <div class="md:col-span-5 col-span-12 mb-auto">
-        <img src={homeLogo} alt="hero" class="md:max-h-72 lg:max-h-72 " />
+        <img src={homeLogo} alt="hero" class="md:max-h-72 lg:max-h-72" />
       </div>
     </div>
   </div>

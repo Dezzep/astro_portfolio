@@ -5,12 +5,13 @@ function Particle() {
   return (
     <Particles
       params={{
+        fps_limit: 23,
         particles: {
           number: {
-            value: 180,
+            value: 10,
             density: {
               enable: true,
-              value_area: 1400,
+              value_area: 100,
             },
           },
 

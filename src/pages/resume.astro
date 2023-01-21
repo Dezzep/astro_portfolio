@@ -9,10 +9,10 @@ import Resume from '../components/Resume/Resume.astro';
 
 <Layout title="Resume">
   <div class="bg-black min-h-screen">
-    <Particle client:load />
-    <Header />
+    <Header client:load />
     <Resume />
 
     <Footer />
+    <Particle client:idle />
   </div>
 </Layout>

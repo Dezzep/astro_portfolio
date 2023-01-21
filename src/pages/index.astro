@@ -5,14 +5,14 @@ import Footer from '../components/Footer/Footer.astro';
 import Home from '../components/Home/Home.astro';
 ---
 
-<Layout title="Home Page">
-  <Particle client:load />
-
+<Layout title="Home">
   <div class="bg-black">
     <div class="h-screen">
       <Home />
+
       <Footer />
     </div>
+    <Particle client:idle />
   </div>
 </Layout>
 
