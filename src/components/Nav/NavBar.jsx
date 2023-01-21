@@ -60,13 +60,13 @@ export default function NavBar() {
   return (
     <div>
       <div className="bg-black/80 sticky top-0 z-50">
-        <div className="py-4 fixed w-full top-0 bg-black/90">
+        <div className="py-6 lg:py-2  fixed w-full top-0 bg-black/90">
           <div className="relative container flex justify-between  mx-auto px-4 lg:px-8  w-full">
             <a
               href="/"
-              className="text-purple-700 text-3xl  font-bold hover:text-purple-700"
+              className="text-purple-700 text-3xl flex items-center  font-bold hover:text-purple-700"
             >
-              JH
+              JH.
             </a>
             <div className="flex space-x-12 items-center">
               <div className="hidden lg:flex gap-8 sm:gap-12 items-center list-none">
