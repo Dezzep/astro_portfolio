@@ -48,7 +48,7 @@ const links = [
 ];
 
 export default function NavBar() {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   const hideTheNavSlider = () => {
     setIsOpen(false);
