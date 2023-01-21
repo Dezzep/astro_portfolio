@@ -13,7 +13,7 @@ const links = [
     key="home"
     id="home"
     href="/"
-    className="text-2xl justify-center py-4 lg:py-auto  px-4 lg:px-auto w-full lg:w-auto lg:text-xl lg:hover:text-purpMain-50 flex items-center gap-2 tracking-wider  "
+    className="text-xl justify-center py-4 lg:py-auto  px-4 lg:px-auto w-full lg:w-auto  lg:hover:text-purpMain-50 flex items-center gap-2 tracking-wider  "
   >
     <AiOutlineHome />
     Home
@@ -22,7 +22,7 @@ const links = [
     key="skills"
     id="skills"
     href="/skills"
-    className=" text-2xl justify-center py-4 lg:py-auto px-4 lg:px-auto w-full lg:w-auto lg:text-xl lg:hover:text-purpMain-50 flex items-center gap-2 tracking-wider  "
+    className=" text-xl justify-center py-4 lg:py-auto px-4 lg:px-auto w-full lg:w-auto  lg:hover:text-purpMain-50 flex items-center gap-2 tracking-wider  "
   >
     <AiOutlineUser style={{ marginBottom: '2px' }} />
     Skills
@@ -31,7 +31,7 @@ const links = [
     key="projects"
     id="projects"
     href="/projects"
-    className="text-2xl justify-center py-4 lg:py-auto  px-4 lg:px-auto w-full lg:w-auto lg:text-xl lg:hover:text-purpMain-50 flex items-center gap-2 tracking-wider"
+    className="text-xl justify-center py-4 lg:py-auto  px-4 lg:px-auto w-full lg:w-auto  lg:hover:text-purpMain-50 flex items-center gap-2 tracking-wider"
   >
     <AiOutlineFundProjectionScreen />
     Projects
@@ -40,7 +40,7 @@ const links = [
     key="resume"
     id="resume"
     href="/resume"
-    className="text-2xl justify-center py-4 lg:py-auto px-4 lg:px-auto w-full lg:w-auto lg:text-xl lg:hover:text-purpMain-50 flex items-center gap-2 tracking-wider "
+    className="text-xl justify-center py-4 lg:py-auto px-4 lg:px-auto w-full lg:w-auto  lg:hover:text-purpMain-50 flex items-center gap-2 tracking-wider "
   >
     <CgFileDocument />
     Resume
@@ -60,13 +60,13 @@ export default function NavBar() {
   return (
     <div>
       <div className="bg-black/80 sticky top-0 z-50">
-        <div className="py-6 lg:py-2  fixed w-full top-0 bg-black/90">
+        <div className="py-4 lg:py-  fixed w-full top-0 bg-black/90">
           <div className="relative container flex justify-between  mx-auto px-4 lg:px-8  w-full">
             <a
               href="/"
               className="text-purple-700 text-3xl flex items-center  font-bold hover:text-purple-700"
             >
-              JH.
+              JH
             </a>
             <div className="flex space-x-12 items-center">
               <div className="hidden lg:flex gap-8 sm:gap-12 items-center list-none">
@@ -81,7 +81,7 @@ export default function NavBar() {
               </div>
               {!isOpen ? (
                 <div className="flex justify-end ml-auto lg:hidden">
-                  <label className="" onClick={showTheNavSlider}>
+                  <label onClick={showTheNavSlider}>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -99,7 +99,7 @@ export default function NavBar() {
                 </div>
               ) : (
                 <div className="flex justify-end ml-auto lg:hidden">
-                  <label className="  ml-56" onClick={hideTheNavSlider}>
+                  <label onClick={hideTheNavSlider}>
                     <svg
                       className=" h-8 w-8 text-primary-content cursor-pointer"
                       xmlns="http://www.w3.org/2000/svg"

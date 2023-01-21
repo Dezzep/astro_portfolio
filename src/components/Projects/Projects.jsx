@@ -17,10 +17,10 @@ const Projects = () => {
     <div className="bg-black pt-36 pb-16">
       <div className="mx-auto">
         <div className="flex flex-col items-center justify-center h-full">
-          <h1 className=" text-4xl sm:text-5xl mb-4">
+          <h1 className=" text-4xl sm:text-5xl mb-4 px-4 text-center">
             My Recent <strong className="text-purpMain-50 ">Works </strong>
           </h1>
-          <p className="pb-32 px-2">
+          <p className="pb-32 px-4 pt-4 text-center">
             Here are a few projects I've worked on recently.
           </p>
           <div className="container grid  grid-cols-1 xl:grid-cols-2  mx-auto px-8 md:px-16 lg:px-24 w-full gap-12 items-center py-6">
