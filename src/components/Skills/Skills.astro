@@ -40,6 +40,9 @@ import Technology from './Technology.jsx';
     justify-content: center;
     align-items: center;
   }
+  .width-full {
+    display: none;
+  }
 
   rect.ContributionCalendar-day[data-level='0'] {
     fill: var(--color-calendar-graph-day-bg);
@@ -64,6 +67,11 @@ import Technology from './Technology.jsx';
 
 <!-- Prepare a container for your calendar. -->
 <Technology />
+
+<h2 class="text-purpMain-50 flex justify-center text-2xl mt-12">
+  Commit Frequency
+</h2>
+
 <div class="calendar p-3 sm:p-4 lg:p-8 pb-32 mb-16">
   <!-- Loading stuff -->
   Loading the data just for you.
@@ -75,7 +83,7 @@ import Technology from './Technology.jsx';
   GitHubCalendar('.calendar', 'Dezzep', {
     responsive: true,
     summary_text: false,
-    global_stats: true,
+    global_stats: false,
     cache: false,
   });
 </script>
