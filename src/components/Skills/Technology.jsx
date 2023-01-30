@@ -35,7 +35,7 @@ const Technology = () => {
         <Card item={<DiNodejs />} title="Node.js" />
         <Card item={<DiMongodb />} title="MongoDB" />
         <Card item={<DiJava />} title="Java" />
-        <Card item={<SiOracle />} title="Oracle" />
+        <Card item={<SiOracle />} title="OracleDB" />
         <Card item={<DiHtml5 />} title="HTML" />
         <Card item={<DiCss3 />} title="CSS" />
         <Card item={<DiSass />} title="Sass" />
