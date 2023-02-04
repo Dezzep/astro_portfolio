@@ -1,16 +1,14 @@
 import ProjectCard from './PojectCards.jsx';
 import webStoreImage from '../../Assets/Projects/shop-device.png';
+import blogImage from '../../Assets/Projects/blog-device.png';
 import libraryImage from '../../Assets/Projects/library-device.png';
 import portfolioImage from '../../Assets/Projects/portfolio-device.png';
-import weatherImage from '../../Assets/Projects/weather-device.png';
 import TailwindDiv from './icons/Tailwind.jsx';
-import Html5Div from './icons/Html5.jsx';
 import ReactDiv from './icons/React.jsx';
 import MongoDbDiv from './icons/Mongodb.jsx';
 import NodeJsDiv from './icons/Nodejs.jsx';
-import JavaScriptDiv from './icons/JavaScript.jsx';
-import SassDiv from './icons/Sass.jsx';
-import WebPackDiv from './icons/Webpack.jsx';
+import PHPDiv from './icons/PHP.jsx';
+import MySQL from './icons/MySQL.jsx';
 
 const Projects = () => {
   return (
@@ -24,6 +22,19 @@ const Projects = () => {
             Here are a few projects I've worked on recently.
           </p>
           <div className="container grid  grid-cols-1 xl:grid-cols-2  mx-auto px-8 md:px-16 lg:px-24 w-full gap-12 items-center py-6">
+            <ProjectCard
+              title="Blog Platform"
+              image={blogImage}
+              alt="A hero page for a fake e-commerce website"
+              description="A Full-Stack Blogging Platform, where users can create an account, log in, author, edit and delete their own blog posts. Users can view all posts from all users. Aditionally there is a dynamic search and highlight feature available on desktop devices."
+              source="https://github.com/Dezzep/blog_crud_app"
+              preview="https://majestic-marshmallow-b17439.netlify.app/"
+              tools1={<ReactDiv />}
+              tools2={<TailwindDiv />}
+              tools3={<PHPDiv />}
+              tools4={<MySQL />}
+            />
+
             <ProjectCard
               title="Web Store"
               image={webStoreImage}
@@ -55,18 +66,6 @@ const Projects = () => {
               preview="https://dezzep.github.io/Portfolio/"
               tools1={<ReactDiv />}
               tools2={<TailwindDiv />}
-            />
-            <ProjectCard
-              title="Weather App"
-              image={weatherImage}
-              alt="A website of a weather application which is showing montreal's weather"
-              description="Uses a weather api to fetch data and displays the information obtained. Converts temperatures and averages out received data to determine the five day forecast."
-              source="https://github.com/Dezzep/weather-app"
-              preview="https://dezzep.github.io/weather-app/"
-              tools2={<JavaScriptDiv />}
-              tools3={<SassDiv />}
-              tools1={<Html5Div />}
-              tools4={<WebPackDiv />}
             />
           </div>
         </div>

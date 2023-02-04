@@ -1,6 +1,6 @@
 export default function Card(props) {
   return (
-    <div className="  bg-purple-800/20 p-6  md:p-12 hover:shadow-lg shadow-sm  shadow-purpMain-50/20 hover:shadow-purpMain-50/50 rounded-lg">
+    <div className="bg-purple-800/20 p-6  md:p-12 hover:shadow-lg shadow-sm  shadow-purpMain-50/20 hover:shadow-purpMain-50/50 rounded-lg">
       <h2 className=" text-center mb-6 text-3xl font-semibold">
         {props.title}
       </h2>
