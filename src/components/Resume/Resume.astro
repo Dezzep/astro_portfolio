@@ -8,7 +8,7 @@ import { AiOutlineDownload } from 'react-icons/ai';
 </h1>
 
 <div class="flex justify-center flex-col mb-6 mt-6">
-  <a href={pdf}>
+  <a href={pdf} target="_blank">
     <button
       class="px-7 mx-auto flex gap-2 justify-center items-center bg-purpMain-50/30 p-3 font-semibold hover:bg-purpMain-50/[.2] mt-6"
     >
@@ -27,7 +27,9 @@ import { AiOutlineDownload } from 'react-icons/ai';
     class="inline-flex items-baseline justify-between w-full mb-3 align-top border-b-8 border-black"
   >
     <div class="block">
-      <h1 class="mb-0 text-5xl font-bold text-gray-800">Jacob Handelman</h1>
+      <h1 class="mb-0 text-4xl sm:text-5xl font-bold text-gray-800">
+        Jacob Handelman
+      </h1>
       <h2 class="m-0 ml-2 text-2xl font-semibold text-gray-700">
         Full Stack Web Development
       </h2>
@@ -393,9 +395,11 @@ import { AiOutlineDownload } from 'react-icons/ai';
 
         <header>
           <h3 class="flex-grow text-lg font-semibold text-gray-700">
-            Vanier College
+            Vanier College &ndash; AEC
           </h3>
-          <p class="al text-md text-gray-500">October 2022 &ndash; Current</p>
+          <p class="al text-md text-gray-500">
+            October 2022 &ndash; February 2023
+          </p>
           <p class="al text-gray-700 text-md">
             <span class="font-semibold text-gray-700 text-md"> Program:</span>
             Web & Database Programming
@@ -412,9 +416,9 @@ import { AiOutlineDownload } from 'react-icons/ai';
     <section class="pb-4 mt-4 mb-4 border-black border-b-2 break-inside-avoid">
       <header>
         <h3 class="flex-grow text-lg font-semibold text-gray-700">
-          University Of Helsinki
+          University Of Helsinki &ndash; Certificate
         </h3>
-        <p class="al text-md text-gray-500">June 2022 &ndash; Current</p>
+        <p class="al text-md text-gray-500">June 2022 &ndash; Ongoing</p>
         <p class="al text-gray-700 text-md">
           <span class="font-semibold text-gray-700 text-md"> Course:</span>
           Full Stack Open
@@ -470,7 +474,40 @@ import { AiOutlineDownload } from 'react-icons/ai';
         >
           PROJECTS
         </h2>
-
+        <section class="pb-4 mb-4 border-black border-b-2 break-inside-avoid">
+          <header>
+            <h3 class="text-lg font-semibold text-gray-700">
+              <a
+                href="https://github.com/Dezzep/library-rework"
+                target="_blank"
+                class="group"
+              >
+                Blogging Platform
+                <span
+                  class="inline-block mr-3 font-normal transition duration-100 ease-in text-gray-600 print:text-black group-hover:text-gray-700"
+                >
+                  ↗
+                </span>
+              </a>
+              <span
+                class="inline-block font-normal transition duration-100 ease-in text-gray-600 print:text-black group-hover:text-gray-700"
+              >
+                <a
+                  href="https://github.com/Dezzep/library-rework"
+                  target="_blank"
+                >
+                  <i class="fab fa-github"></i>
+                </a>
+              </span>
+            </h3>
+            <p class="al text-md text-gray-600">2023 | LAMP stack</p>
+          </header>
+          <p class="mt-2.1 text-md text-gray-700 al">
+            A blogging platform, where users can create accounts, create, edit,
+            and delete posts, and view other users posts. Built with React and
+            tailwind for the frontend and a PHP RESTful api for the backend.
+          </p>
+        </section>
         <section class="pb-4 mb-4 border-black border-b-2 break-inside-avoid">
           <header>
             <h3 class="text-lg font-semibold text-gray-700">
@@ -579,7 +616,7 @@ import { AiOutlineDownload } from 'react-icons/ai';
   </div>
 </div>
 <div class="flex justify-center flex-col mb-16">
-  <a href={pdf}>
+  <a href={pdf} target="_blank">
     <button
       class="px-7 mx-auto flex gap-2 justify-center items-center bg-purpMain-50/30 p-3 font-semibold hover:bg-purpMain-50/[.2] mt-6"
     >
